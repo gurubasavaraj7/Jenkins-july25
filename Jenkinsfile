@@ -2,9 +2,17 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('Checkout') {
             steps {
-                echo 'Hello World Im been there a lot time'
+                git branch: 'main', credentialsId: 'github', url: 'https://github.com/gurubasavaraj7/Devops-July2025.git'
+            }
+        }
+        stage('BUILD') {
+            steps {
+                sh '''
+                    ls -lrt
+                    pwd
+                '''
             }
         }
     }
