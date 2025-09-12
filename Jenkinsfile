@@ -15,7 +15,7 @@ pipeline {
                 '''
             }
         }
-        stage {
+        stage('Checkout1') {
             steps {
                 checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github', url: 'https://github.com/gurubasavaraj7/Jenkins-july25.git']])
             }
