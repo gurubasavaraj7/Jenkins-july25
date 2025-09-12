@@ -15,5 +15,19 @@ pipeline {
                 '''
             }
         }
+        stage {
+            steps {
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github', url: 'https://github.com/gurubasavaraj7/Jenkins-july25.git']])
+            }
+        }
+        
+        stage('BUILD2') {
+            steps {
+                sh '''
+                    ls -lrt
+                    pwd
+                '''
+            }
+        }
     }
 }
