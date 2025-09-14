@@ -25,9 +25,7 @@ pipeline {
                             echo "Build started"
                             ls -lrt
                             sudo appt update -y
-                            sudo apt install maven -y
-                            mvn clean install   
-                            echo "Build completed"  
+                            
                         '''  
                     }
                 }    
