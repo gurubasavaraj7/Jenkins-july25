@@ -30,6 +30,7 @@ pipeline {
                             echo "Build completed"  
                         '''  
                     }
+                }    
                 stage('Checkout Code quality'){
                     steps {
                         sh '''
