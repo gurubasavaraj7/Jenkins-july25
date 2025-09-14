@@ -7,9 +7,9 @@ pipeline {
             git branch: 'main', credentialsId: 'github', url: 'https://github.com/gurubasavaraj7/Devops-July2025.git'
         }
     }
-        stage('Parallel steps'){
+        stage('Parallel steps') {
             parallel {
-                stage('Checkout Code quality'){
+                stage('Checkout Code quality') {
                     steps {
                         sh '''
                             ls -lrt
@@ -31,15 +31,7 @@ pipeline {
                         '''  
                     }
                 }    
-                stage('Checkout Code quality'){
-                    steps {
-                        sh '''
-                            ls -lrt
-                            pwd
-                        '''
-                    }
-                }
-                           
+                                           
             }
                 
         }
