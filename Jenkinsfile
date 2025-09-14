@@ -8,7 +8,7 @@ pipeline {
         }
     }
         stage('Parallel steps'){
-            parallel{
+            parallel {
                 stage('Checkout Code quality'){
                     steps {
                         sh '''
