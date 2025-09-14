@@ -8,6 +8,7 @@ pipeline {
         }
     }
         stage('Parallel steps'){
+            parallel{
                 stage('Checkout Code quality'){
                     steps {
                         sh '''
@@ -29,7 +30,17 @@ pipeline {
                             echo "Build completed"  
                         '''  
                     }
+                stage('Checkout Code quality'){
+                    steps {
+                        sh '''
+                            ls -lrt
+                            pwd
+                        '''
+                    }
                 }
+                           
+            }
+                
         }
     }    
 }
