@@ -24,7 +24,6 @@ pipeline {
                         sh '''
                             echo "Build started"
                             ls -lrt
-                            sudo appt update -y
                             
                         '''  
                     }
